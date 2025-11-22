@@ -1,0 +1,441 @@
+/* Predict Page Styles */
+.predict-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 3rem 0 4rem 0;
+  text-align: left;
+}
+
+.predict-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Title Section */
+.predict-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #161616;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.predict-title svg {
+  color: #ff445a;
+}
+
+/* Form Styles */
+.predict-form {
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+/* Form Sections */
+.form-section {
+  border: 2px solid rgba(22, 22, 22, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  border-color: rgba(22, 22, 22, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-section legend {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #161616;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #161616;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Input Styles */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(22, 22, 22, 0.15);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #161616;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #161616;
+  box-shadow: 0 0 0 3px rgba(22, 22, 22, 0.1);
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="number"]:hover,
+.form-group select:hover {
+  border-color: rgba(22, 22, 22, 0.25);
+}
+
+.form-group input::placeholder {
+  color: rgba(22, 22, 22, 0.5);
+}
+
+/* Select Dropdown Styles */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Checkbox Group Styles */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(22, 22, 22, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  margin-bottom: 0;
+  background: #ffffff;
+}
+
+.checkbox-group label:hover {
+  border-color: rgba(22, 22, 22, 0.2);
+  background: rgba(22, 22, 22, 0.02);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #161616;
+  flex-shrink: 0;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label,
+.checkbox-group label:has(input[type="checkbox"]:checked) {
+  border-color: #161616;
+  background: rgba(22, 22, 22, 0.05);
+  font-weight: 500;
+}
+
+/* Special checkbox styling within label */
+.checkbox-group label input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Submit Button Container */
+.predict-form > div[style*="justify-content: center"] {
+  margin-top: 2rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.85rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.btn-primary {
+  background: #161616;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(22, 22, 22, 0.15);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #2a2a2a;
+  box-shadow: 0 6px 16px rgba(22, 22, 22, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Prediction Output Section */
+.predict-output {
+  margin-top: 2.5rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.predict-output p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(22, 22, 22, 0.7);
+  margin: 1rem 0;
+}
+
+/* Result Card */
+.result-card {
+  background: linear-gradient(135deg, rgba(255, 68, 90, 0.05) 0%, rgba(246, 167, 0, 0.05) 100%);
+  border: 2px solid rgba(255, 68, 90, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(255, 68, 90, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+.result-card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.result-card p {
+  font-size: 1.15rem;
+  color: #161616;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.probability-score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff445a 0%, #f6a700 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+/* Error Message */
+.error {
+  color: #ff445a;
+  background: rgba(255, 68, 90, 0.1);
+  border: 1px solid rgba(255, 68, 90, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Risk Report Section */
+.risk-report {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: rgba(22, 22, 22, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(22, 22, 22, 0.1);
+}
+
+/* Loading State */
+.predict-output p[style*="Loading"] {
+  color: rgba(22, 22, 22, 0.6);
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .predict-page {
+    padding: 2rem 0 3rem 0;
+  }
+
+  .predict-content {
+    padding: 0 1rem;
+  }
+
+  .predict-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .predict-title svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-section legend {
+    font-size: 1.15rem;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .checkbox-group label {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .result-card {
+    padding: 1.5rem;
+  }
+
+  .result-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .probability-score {
+    font-size: 2rem;
+    display: block;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.9rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .predict-title {
+    font-size: 1.75rem;
+  }
+
+  .form-section {
+    padding: 1.25rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group select {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .result-card {
+    padding: 1.25rem;
+  }
+
+  .result-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .probability-score {
+    font-size: 1.75rem;
+  }
+}
+
+/* Accessibility Improvements */
+.form-group input[type="text"]:focus-visible,
+.form-group input[type="number"]:focus-visible,
+.form-group select:focus-visible {
+  outline: 2px solid #161616;
+  outline-offset: 2px;
+}
+
+.checkbox-group label:focus-within {
+  outline: 2px solid #161616;
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #161616;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .predict-page {
+    background: white;
+    padding: 1rem;
+  }
+
+  .btn,
+  .checkbox-group label {
+    border: 1px solid #000;
+  }
+
+  .result-card {
+    border: 2px solid #000;
+    page-break-inside: avoid;
+  }
+}
+
