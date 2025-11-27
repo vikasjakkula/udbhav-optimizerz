@@ -1,6 +1,8 @@
-Flask
-flask-cors
-numpy
+fastapi
+uvicorn
 pandas
 scikit-learn
+joblib
+pydantic
+numpy
 

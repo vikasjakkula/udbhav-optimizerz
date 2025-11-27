@@ -244,14 +244,26 @@ function Predict() {
             {/* Submit Button */}
             <div style={{ display: "flex", justifyContent: "center", marginTop: "1.5rem" }}>
               <button className="btn btn-primary" type="submit" disabled={loading}>
-                {loading ? "Calculating..." : "Predict Heart Attack Risk"}
+                {loading ? (
+                  <span style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <span className="button-spinner"></span>
+                    Calculating...
+                  </span>
+                ) : (
+                  "Predict Heart Attack Risk"
+                )}
               </button>
             </div>
           </form>
 
           {/* Prediction Output */}
           <div className="predict-output">
-            {loading && <p>Loading prediction...</p>}
+            {loading && (
+              <div className="loading-container">
+                <div className="spinner"></div>
+                <p className="loading-text">Analyzing your data...</p>
+              </div>
+            )}
             {result !== null && (
               <div className="result-card">
                 <h2>Prediction Results</h2>
